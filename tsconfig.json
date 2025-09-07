@@ -1,3 +1,13 @@
 {
+  "compilerOptions": {
+    // Setzt das Basisverzeichnis für die Auflösung von Pfaden.
+    "baseUrl": ".",
+    // Definiert die Aliase.
+    "paths": {
+      // Der Alias `@/*` wird auf den Ordner `src/*` abgebildet.
+      "@/*": ["src/*"]
+    }
+    // ... andere Optionen
+  },
   "extends": "astro/tsconfigs/base"
 }
