@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/SparklingByte/personal-website#readme",
   "dependencies": {
+    "@astrojs/mdx": "^4.3.5",
     "@tailwindcss/vite": "^4.1.13",
     "astro": "^5.13.5",
     "tailwindcss": "^4.1.13"
