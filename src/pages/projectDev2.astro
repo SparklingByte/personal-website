@@ -1,0 +1,119 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import Tag from "@/components/ui/Tag.astro";
+import BlackButton from "@/components/ui/buttons/BlackButton.astro";
+import ImageResponsive from "@/components/ui/ImageResponsive.astro";
+import "@/styles/global.css";
+---
+
+<MainLayout>
+    <div class="lg:px-120 lg:pt-20 p-10">
+        <div
+            id="headerContainer"
+            class="font-['Cascadia_Code'] flex lg:flex-row flex-col justify-center items-center gap-10"
+        >
+            <div
+                class="w-full flex flex-col justify-start items-start rounded-2xl text-left flex-2 border border-black/10 p-5"
+            >
+                <div>
+                    <div
+                        class="inline-flex items-center px-4 py-2 text-sm font-medium leading-none text-green-700 bg-green-100 rounded-lg font-['Google_Sans_Code']"
+                    >
+                        <span class="relative flex h-2 w-2 mr-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-65"
+                            ></span>
+                            <span
+                                class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
+                            ></span>
+                        </span>
+                        Demo Available
+                    </div>
+                </div>
+                <h1 class="font-semibold text-4xl mt-5">
+                    Super Duper Project
+                </h1>
+                <h2 class="lg:text-xl text-xl mt-5">
+                    This is a short description of the project.
+                </h2>
+                <div class="mt-10">
+                    <h2 class="text-left text-sm">TECH I'VE USED</h2>
+                    <div class="flex justify-start flex-wrap gap-2">
+                        <Tag title="Astro" />
+                        <Tag title="Tailwind" />
+                        <Tag title="Tailwind" />
+                        <Tag title="Tailwind" />
+                        <Tag title="Tailwind" />
+                    </div>
+                    <div class="flex flex-wrap justify-start gap-4 mt-10">
+                        <BlackButton
+                            title="Open Repository"
+                            link="https://google.com"
+                            iconClass="fa-brands fa-github"
+                        />
+                        <BlackButton
+                            title="Demo"
+                            link="https://google.com"
+                            iconClass="fa-solid fa-link"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="rounded-2xl flex-3">
+                <ImageResponsive
+                    src="https://framerusercontent.com/images/Muvrwo0iPNQVc9oCSgA0HP3pkro.jpg?scale-down-to=2048"
+                    class="rounded-2xl overflow-hidden"
+                    alt="Super Duper Project"
+                />
+            </div>
+        </div>
+
+        <div class="mt-50 lg:px-30 rounded-lg flex flex-col gap-10">
+            <div
+                class="font-['Cascadia_Code'] flex flex-col flex-wrap justify-center gap-5"
+            >
+                <div class="flex-1">
+                    <h2 class="text-xl font-semibold lg:text-left text-left">
+                        THE MOTIVATION
+                    </h2>
+                </div>
+                <div class="flex-2">
+                    <p class="text-md font-medium font-['Bricolage_Grotesque']">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Itaque eum recusandae, laudantium distinctio vero
+                        eligendi molestias voluptate aspernatur voluptatem
+                        nihil, voluptas, ab fugit soluta consectetur laboriosam
+                        dolores illum vel explicabo. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Itaque eum recusandae,
+                        laudantium distinctio vero eligendi molestias voluptate
+                        aspernatur voluptatem nihil, voluptas, ab fugit soluta
+                        consectetur laboriosam dolores illum vel explicabo.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-black/10"></div>
+            <div
+                class="font-['Cascadia_Code'] flex flex-col flex-wrap justify-center gap-10"
+            >
+                <div class="flex-1">
+                    <h1 class="text-xl font-semibold lg:text-left text-left">
+                        THE MOTIVATION
+                    </h1>
+                </div>
+                <div class="flex-2">
+                    <p class="text-lg">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Itaque eum recusandae, laudantium distinctio vero
+                        eligendi molestias voluptate aspernatur voluptatem
+                        nihil, voluptas, ab fugit soluta consectetur laboriosam
+                        dolores illum vel explicabo. Lorem ipsum dolor sit amet
+                        consectetur adipisicing elit. Itaque eum recusandae,
+                        laudantium distinctio vero eligendi molestias voluptate
+                        aspernatur voluptatem nihil, voluptas, ab fugit soluta
+                        consectetur laboriosam dolores illum vel explicabo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</MainLayout>
