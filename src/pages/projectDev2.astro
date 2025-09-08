@@ -4,11 +4,11 @@ import Tag from "@/components/ui/Tag.astro";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import ImageResponsive from "@/components/ui/ImageResponsive.astro";
 import "@/styles/global.css";
-import { Content } from "@/content/test.md"
+import { Content } from "@/content/test.mdx";
 ---
 
 <MainLayout>
-    <div class="lg:px-120 lg:pt-20 p-10">
+    <div class="lg:px-80 lg:pt-20 p-10">
         <div
             id="headerContainer"
             class="font-cascadia flex lg:flex-row flex-col justify-center gap-10"
@@ -41,7 +41,7 @@ import { Content } from "@/content/test.md"
                         <Tag title="Astro" />
                         <Tag title="Tailwind" />
                         <Tag title="Tailwind" />
-                        <Tag title="Tailwind" />uper Duper Project
+                        <Tag title="Tailwind" />
                         <Tag title="Tailwind" />
                     </div>
                     <div class="flex flex-wrap justify-start gap-4 mt-10">
@@ -66,34 +66,16 @@ import { Content } from "@/content/test.md"
                 />
             </div>
         </div>
-        <div class="mt-50 lg:px-30 rounded-lg flex flex-col gap-10">
-            <Content />
-        </div>
-
-        <div class="mt-50 lg:px-30 rounded-lg flex flex-col gap-10">
+        <div
+            class="bg-gray-50 border p-5 border-black/10 rounded-lg mt-20"
+        >
             <div
-                class="font-cascadia flex flex-col flex-wrap justify-center gap-5"
+                class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-p:font-bricolage prose-p:text-justify prose-img:rounded-2xl prose-img:mb-0 max-w-none
+                prose-a:px-1 prose-a:py-0.5 prose-a:bg-gray-200 prose-a:rounded-md prose-a:no-underline
+                prose-"
             >
-                <div class="flex-1">
-                    <h2 class="text-xl font-semibold lg:text-left text-left">
-                        THE MOTIVATION
-                    </h2>
-                </div>
-                <div class="flex-2">
-                    <p class="text-md font-medium font-bricolage text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Itaque eum recusandae, laudantium distinctio vero
-                        eligendi molestias voluptate aspernatur voluptatem
-                        nihil, voluptas, ab fugit soluta consectetur laboriosam
-                        dolores illum vel explicabo. Lorem ipsum dolor sit amet
-                        consectetur adipisicing elit. Itaque eum recusandae,
-                        laudantium distinctio vero eligendi molestias voluptate
-                        aspernatur voluptatem nihil, voluptas, ab fugit soluta
-                        consectetur laboriosam dolores illum vel explicabo.
-                    </p>
-                </div>
+                <Content />
             </div>
-            <div class="border-t border-black/10"></div>
         </div>
     </div>
 </MainLayout>
