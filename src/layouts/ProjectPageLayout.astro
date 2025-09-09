@@ -1,0 +1,35 @@
+---
+import MainLayout from "@/layouts/MainLayout.astro";
+import ImageResponsive from "@/components/ui/ImageResponsive.astro";
+import "@/styles/global.css";
+import ProjectCard from "@/components/ui/ProjectCard.astro";
+---
+
+<MainLayout>
+    <div class="lg:px-80 lg:pt-20 p-10">
+        <div
+            id="headerContainer"
+            class="font-cascadia flex lg:flex-row flex-col justify-center gap-10"
+        >
+            <ProjectCard />
+            <div class="rounded-2xl flex-3">
+                <ImageResponsive
+                    src="https://framerusercontent.com/images/Muvrwo0iPNQVc9oCSgA0HP3pkro.jpg"
+                    class="rounded-2xl overflow-hidden h-full object-cover"
+                    alt="Super Duper Project"
+                />
+            </div>
+        </div>
+        <div
+            class="bg-gray-50 border p-5 border-black/10 rounded-lg mt-20"
+        >
+            <div
+                class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-p:font-bricolage prose-p:text-justify prose-img:rounded-2xl prose-img:mb-0 max-w-none
+                prose-a:px-1 prose-a:py-0.5 prose-a:bg-gray-200 prose-a:rounded-md prose-a:no-underline
+                prose-"
+            >
+                <Content />
+            </div>
+        </div>
+    </div>
+</MainLayout>
