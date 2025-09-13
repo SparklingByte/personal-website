@@ -25,7 +25,9 @@ const { project } = Astro.props;
                     class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
                 ></span>
             </span>
-            Demo Available
+            {project.data.status == "live" && "Online"}
+            {project.data.status == "outdated" && "Not Online"}
+            {project.data.status == "inProgress" && "In Progress"}
         </div>
     </div>
     <h1 class="font-semibold text-4xl mt-5">{project.data.title}</h1>
@@ -35,23 +37,28 @@ const { project } = Astro.props;
     <div class="mt-10">
         <h2 class="text-left text-sm">TECH I'VE USED</h2>
         <div class="flex justify-start flex-wrap gap-2">
-            <Tag title="Astro" />
-            <Tag title="Tailwind" />
-            <Tag title="Tailwind" />
-            <Tag title="Tailwind" />
-            <Tag title="Tailwind" />
+            {project.data.techUsed.map((tech) => <Tag title={tech} />)}
         </div>
         <div class="flex flex-wrap justify-start gap-4 mt-10">
-            <BlackButton
-                title="Open Repository"
-                link="https://google.com"
-                iconClass="fa-brands fa-github"
-            />
-            <BlackButton
-                title="Demo"
-                link="https://google.com"
-                iconClass="fa-solid fa-link"
-            />
+            {
+                project.data.repoLink && (
+                    <BlackButton
+                        title="Open Repository"
+                        link={project.data.repoLink}
+                        iconClass="fa-brands fa-github"
+                    />
+                )
+            }
+
+            {
+                project.data.liveLink && (
+                    <BlackButton
+                        title="Demo"
+                        link={project.data.liveLink}
+                        iconClass="fa-solid fa-link"
+                    />
+                )
+            }
         </div>
     </div>
 </div>
