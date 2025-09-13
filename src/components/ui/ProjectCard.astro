@@ -36,7 +36,7 @@ const { project } = Astro.props;
     </h2>
     <div class="mt-10">
         <h2 class="text-left text-sm">TECH I'VE USED</h2>
-        <div class="flex justify-start flex-wrap gap-2">
+        <div class="flex justify-start flex-wrap gap-2 mt-2">
             {project.data.techUsed.map((tech) => <Tag title={tech} />)}
         </div>
         <div class="flex flex-wrap justify-start gap-4 mt-10">
