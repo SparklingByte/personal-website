@@ -2,7 +2,8 @@
 title: "Really Nice Project"
 description: "A brief description of your project"
 image: "/path/to/image.jpg"
-status: "outdated"
+techUsed: ["Astro", "TailwindCSS"]
+status: "live"
 repoLink: "https://github.com/"
 liveLink: "https://google.com/"
 ---
