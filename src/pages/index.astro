@@ -2,46 +2,81 @@
 import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
+import ProjectPreviewCard from "@/components/ui/ProjectPreviewCard.astro";
+import { getCollection } from "astro:content";
 
+const projects = await getCollection("projects");
 ---
 
 <MainLayout>
-  <div
-    class="min-h-dvh bg-warm overflow-hidden flex items-center justify-center"
-  >
-    <div class="flex flex-col items-center gap-8 px-7 max-w-4xl">
-      <div class="relative w-[120px] h-[120px]">
-        <div class="relative w-full h-full">
-          <img
-            src="/pictures/profile-image500.webp"
-            alt="Profile picture"
-            class="absolute inset-0 w-full h-full object-cover rounded-lg blur-sm opacity-60"
-          />
-          <img
-            src="/pictures/profile-image500.webp"
-            alt="Profile picture"
-            class="relative w-full h-full object-cover rounded-lg [mask-image:radial-gradient(circle_at_center,black_65%,transparent_95%)]"
-          />
+    <div class="p-2 pt-0 flex flex-col items-center">
+        <div
+            class="min-h-dvh bg-warm overflow-hidden flex items-center justify-center"
+        >
+            <div class="flex flex-col items-center gap-8 px-7 max-w-4xl">
+                <div class="relative w-[120px] h-[120px]">
+                    <div class="relative w-full h-full">
+                        <img
+                            src="/pictures/profile-image500.webp"
+                            alt="Profile picture"
+                            class="absolute inset-0 w-full h-full object-cover rounded-lg blur-sm opacity-60"
+                        />
+                        <img
+                            src="/pictures/profile-image500.webp"
+                            alt="Profile picture"
+                            class="relative w-full h-full object-cover rounded-lg [mask-image:radial-gradient(circle_at_center,black_65%,transparent_95%)]"
+                        />
+                    </div>
+                </div>
+
+                <h1
+                    class="text-black text-5xl text-center break-words font-cascadia"
+                >
+                    Welcome :)
+                </h1>
+
+                <p
+                    class="text-gray-900 font-medium text-xl text-center break-words max-w-2xl font-bricolage"
+                >
+                    Nice to meet you, I'm Nico. After a gap year in New Zealand,
+                    I am now studying computer science in Germany. Come back
+                    later to take a look at my current and past projects.
+                </p>
+
+                <div class="space-x-4">
+                    <BlackButton
+                        title="LinkedIn"
+                        link="https://www.linkedin.com/in/nico-maertin/"
+                        iconClass="fa-brands fa-linkedin"
+                    />
+                    <BlackButton
+                        title="E-Mail"
+                        link="mailto:contact@nico-maertin.com"
+                        iconClass="fa-solid fa-at"
+                    />
+                </div>
+            </div>
         </div>
-      </div>
 
-      <h1 class="text-black text-5xl text-center break-words font-cascadia">
-        Welcome :)
-      </h1>
-
-      <p
-        class="text-gray-900 font-medium text-xl text-center break-words max-w-2xl font-bricolage"
-      >
-        Nice to meet you, I'm Nico. After a gap year in New Zealand, I am now
-        studying computer science in Germany. Come back later to take a look at
-        my current and past projects.
-      </p>
-
-      <div class="space-x-4">
-        <BlackButton title="LinkedIn" link="https://www.linkedin.com/in/nico-maertin/" iconClass="fa-brands fa-linkedin"/>
-        <BlackButton title="E-Mail" link="mailto:contact@nico-maertin.com" iconClass="fa-solid fa-at"/>
-
-      </div>
-    </div>
-  </div>
-</MainLayout>
+        <div
+            id="projects"
+            class="border border-black/20 bg-gray-100 rounded-xl p-5 relative mt-20 lg:w-4xl w-full"
+        >
+            <h1
+                class="absolute -top-4 bg-black px-2 py-0.5 rounded-md text-white inline font-cascadia uppercase font-bold"
+            >
+                My Projects
+            </h1>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+                {projects.map((p) => <ProjectPreviewCard project={p} />)}
+                <div
+                    class="flex items-center justify-center p-10 border border-black/10 rounded-xl"
+                >
+                    <p class="text-center text-gray-400 font-cascadia">
+                        More Projects coming soon
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div></MainLayout
+>
