@@ -2,10 +2,10 @@
 import Tag from "@/components/ui/Tag.astro";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
-import ImageResponsive from "@/components/ui/ImageResponsive.astro";
 import "@/styles/global.css";
 import { getCollection, render } from "astro:content";
 import ProjectCard from "@/components/ui/ProjectCard.astro";
+import { Image } from "astro:assets";
 
 export async function getStaticPaths() {
     const projects = await getCollection("projects");
@@ -27,9 +27,9 @@ const { Content } = await render(project);
         >
             <ProjectCard project={project} />
             <div class="rounded-2xl flex-3">
-                <ImageResponsive
+                <img
                     src={project.data.image}
-                    class="rounded-2xl overflow-hidden h-full object-cover"
+                    class="rounded-2xl overflow-hidden h-full object-cover w-full"
                     alt={project.data.title}
                 />
             </div>
