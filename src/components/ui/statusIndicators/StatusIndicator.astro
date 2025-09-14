@@ -1,0 +1,18 @@
+---
+import { ProjectStatus } from "@/content.config";
+import GreenStatusIndicator from "@/components/ui/statusIndicators/GreenStatusIndicator.astro";
+import YellowStatusIndicator from "@/components/ui/statusIndicators/YellowStatusIndicator.astro";
+import BlueStatusIndicator from "@/components/ui/statusIndicators/BlueStatusIndicator.astro";
+import RedStatusIndicator from "@/components/ui/statusIndicators/RedStatusIndicator.astro";
+
+interface Props {
+    status: keyof typeof ProjectStatus;
+}
+
+const { status } = Astro.props;
+---
+
+{status == "inProgress" && <BlueStatusIndicator status={status} />}
+{status == "live" && <GreenStatusIndicator status={status} />}
+{status == "outdated" && <RedStatusIndicator status={status} />}
+{status == "paused" && <YellowStatusIndicator status={status} />}

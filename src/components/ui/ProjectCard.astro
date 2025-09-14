@@ -3,6 +3,7 @@ import type { CollectionEntry } from "astro:content";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import Tag from "@/components/ui/Tag.astro";
 import BorderButton from "@/components/ui/buttons/BorderButton.astro";
+import StatusIndicator from "@/components/ui/statusIndicators/StatusIndicator.astro";
 
 interface Props {
     project: CollectionEntry<"projects">;
@@ -15,21 +16,7 @@ const { project } = Astro.props;
     class="w-full flex flex-col justify-start items-start rounded-2xl text-left flex-2 border border-black/10 p-5 font-cascadia"
 >
     <div>
-        <div
-            class="inline-flex items-center px-4 py-2 text-sm font-medium leading-none text-green-700 bg-green-100 rounded-lg"
-        >
-            <span class="relative flex h-2 w-2 mr-2">
-                <span
-                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-65"
-                ></span>
-                <span
-                    class="relative inline-flex rounded-full h-2 w-2 bg-green-500"
-                ></span>
-            </span>
-            {project.data.status == "live" && "Online"}
-            {project.data.status == "outdated" && "Not Online"}
-            {project.data.status == "inProgress" && "In Progress"}
-        </div>
+        <StatusIndicator status={project.data.status} />
     </div>
     <h1 class="font-semibold text-4xl mt-5">{project.data.title}</h1>
     <h2 class="lg:text-xl text-xl mt-5">

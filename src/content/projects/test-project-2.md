@@ -3,7 +3,7 @@ title: "Personal Website"
 description: "A brief description of your project"
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/1200px-Cow_female_black_white.jpg"
 techUsed: ["Astro", "TailwindCSS"]
-status: "inProgress"
+status: "paused"
 repoLink: "https://github.com/"
 liveLink: "https://google.com/"
 ---
