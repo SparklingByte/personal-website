@@ -1,7 +1,7 @@
 ---
 title: "Personal Website"
 description: "A brief description of your project"
-image: "/path/to/image.jpg"
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cow_female_black_white.jpg/1200px-Cow_female_black_white.jpg"
 techUsed: ["Astro", "TailwindCSS"]
 status: "inProgress"
 repoLink: "https://github.com/"
