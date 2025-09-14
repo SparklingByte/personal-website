@@ -20,26 +20,28 @@ const { Content } = await render(project);
 ---
 
 <MainLayout>
-    <div class="lg:px-80 lg:pt-20 p-10">
-        <div
-            id="headerContainer"
-            class="font-cascadia flex lg:flex-row flex-col justify-center gap-10"
-        >
-            <ProjectCard project={project} />
-            <div class="rounded-2xl flex-3">
-                <img
-                    src={project.data.image}
-                    class="rounded-2xl overflow-hidden h-full object-cover w-full"
-                    alt={project.data.title}
-                />
-            </div>
-        </div>
-        <div class="bg-gray-100 border p-5 border-black/10 rounded-lg mt-20">
+    <div class="flex flex-col items-center">
+        <div class="flex flex-col gap-10 md:w-3xl lg:w-5xl px-2">
             <div
-                class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-p:font-bricolage prose-p:text-justify prose-img:rounded-2xl prose-img:mb-0 max-w-none
-                prose-a:px-1 prose-a:py-0.5 prose-a:bg-blue-300 prose-a:rounded-md prose-a:no-underline"
+                id="headerContainer"
+                class="font-cascadia flex md:flex-row flex-col justify-center gap-10"
             >
-                <Content />
+                <ProjectCard project={project} />
+                <div class="rounded-2xl flex-3">
+                    <img
+                        src={project.data.image}
+                        class="rounded-2xl overflow-hidden h-full object-cover w-full"
+                        alt={project.data.title}
+                    />
+                </div>
+            </div>
+            <div class="bg-gray-100 border p-5 border-black/10 rounded-2xl">
+                <div
+                    class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-p:font-bricolage prose-p:text-justify prose-img:rounded-2xl prose-img:mb-0 max-w-none
+                prose-a:px-1 prose-a:py-0.5 prose-a:bg-blue-300 prose-a:rounded-md prose-a:no-underline"
+                >
+                    <Content />
+                </div>
             </div>
         </div>
     </div>
