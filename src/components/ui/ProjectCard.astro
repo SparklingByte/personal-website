@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import Tag from "@/components/ui/Tag.astro";
+import BorderButton from "@/components/ui/buttons/BorderButton.astro";
 
 interface Props {
     project: CollectionEntry<"projects">;
@@ -52,7 +53,7 @@ const { project } = Astro.props;
 
             {
                 project.data.liveLink && (
-                    <BlackButton
+                    <BorderButton
                         title="Demo"
                         link={project.data.liveLink}
                         iconClass="fa-solid fa-link"
