@@ -1,4 +1,8 @@
 ---
+interface Props {
+    title: string;
+}
+
 const { title } = Astro.props;
 ---
 
@@ -6,6 +10,6 @@ const { title } = Astro.props;
     <div
         class="bg-slate-100 border h-auto px-2 py-1 text-xs rounded-md text-black"
     >
-        <p class="font-cascadia">{title}</p>
+        <p class="font-cascadia mr-1">{title}</p>
     </div>
 </div>

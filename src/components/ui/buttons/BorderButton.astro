@@ -1,12 +1,21 @@
 ---
-const { title, link, iconClass } = Astro.props;
+interface Props {
+    title: string;
+    link: string;
+    iconClass: string;
+    newTab: boolean;
+}
+
+const { title, link, iconClass, newTab } = Astro.props;
 ---
 
 <button
     ><a
         href={link}
         class="border border-black/20 font-cascadia font-medium inline-block px-4 py-2 text-gray-800 rounded-lg hover:bg-gray-100 transition"
-        target="_blank"
-        rel="noopener noreferrer">{title} <i class={iconClass}></i></a
+        target={newTab ? "_blank" : ""}
+    >
+        {title}
+        <i class={iconClass}></i></a
     ></button
 >

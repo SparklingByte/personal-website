@@ -47,6 +47,7 @@ const { project } = Astro.props;
                         title="Open Repository"
                         link={project.data.repoLink}
                         iconClass="fa-brands fa-github"
+                        newTab={true}
                     />
                 )
             }
@@ -57,6 +58,7 @@ const { project } = Astro.props;
                         title="Demo"
                         link={project.data.liveLink}
                         iconClass="fa-solid fa-link"
+                        newTab={true}
                     />
                 )
             }
