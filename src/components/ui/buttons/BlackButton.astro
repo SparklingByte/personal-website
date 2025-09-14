@@ -2,10 +2,11 @@
 const { title, link, iconClass } = Astro.props;
 ---
 
-<button
-    ><a
+<button>
+    <a
         href={link}
         class="font-cascadia font-medium inline-block px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition"
         target="_blank"
-        rel="noopener noreferrer">{title} <i class={iconClass}></i></a></button
->
+        rel="noopener noreferrer">{title} <i class={iconClass}></i></a
+    >
+</button>
