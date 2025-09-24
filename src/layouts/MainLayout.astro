@@ -1,5 +1,4 @@
 ---
-import NavBar from "../components/NavBar.astro";
 const { title } = Astro.props;
 
 interface Props {
@@ -19,8 +18,16 @@ interface Props {
             referrerpolicy="no-referrer"
         />
         <title>{title} | Nico Märtin</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </head>
     <body>
         <slot />
     </body>
+    <footer class="mt-20">
+        <div class="bg-gray-200 border-t border-stone-300">
+            <p class="text-gray-500 font-cascadia text-xs text-center py-2">
+                © 2025 Nico Märtin
+            </p>
+        </div>
+    </footer>
 </html>
