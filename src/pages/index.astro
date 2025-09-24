@@ -3,22 +3,19 @@ import "../styles/global.css";
 import MainLayout from "@/layouts/MainLayout.astro";
 import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import ProjectPreviewCard from "@/components/ui/ProjectPreviewCard.astro";
+import JobCard from "@/components/ui/JobCard.astro";
+
 import { getCollection } from "astro:content";
 
 const projects = await getCollection("projects");
 ---
 
 <MainLayout title="Home">
-    <div class="p-2 pt-0 flex flex-col items-center">
+    <div class="p-2 md:pt-20 flex flex-col items-center">
         <div class="bg-warm overflow-hidden flex items-center justify-center">
             <div class="flex flex-col items-center gap-8 px-7 max-w-4xl">
                 <div class="relative w-[120px] h-[120px]">
                     <div class="relative w-full h-full">
-                        <img
-                            src="/pictures/profile-image500.webp"
-                            alt="Profile picture"
-                            class="absolute inset-0 w-full h-full object-cover rounded-lg blur-sm opacity-60"
-                        />
                         <img
                             src="/pictures/profile-image500.webp"
                             alt="Profile picture"
@@ -28,13 +25,28 @@ const projects = await getCollection("projects");
                 </div>
 
                 <h1
-                    class="text-black text-5xl text-center break-words font-cascadia"
+                    class="text-black text-2xl text-center break-words font-cascadia"
                 >
                     Welcome :)
                 </h1>
 
+                <div class="flex flex-wrap w-full justify-center gap-2">
+                    <JobCard
+                        iconClass="fa-solid fa-graduation-cap"
+                        textTop="Computer Science Student"
+                        textBottom="Technische Hochschule Ingolstadt"
+                        link="https://www.thi.de/"
+                    />
+                    <JobCard
+                        iconClass="fa-solid fa-briefcase"
+                        textTop="Working Student"
+                        textBottom="TSG Deutschland"
+                        link="https://www.tsg-solutions.com"
+                    />
+                </div>
+
                 <p
-                    class="text-gray-900 font-medium text-xl text-center break-words max-w-2xl font-bricolage"
+                    class="text-gray-600 font-normal text-md text-center break-words max-w-2xl font-bricolage"
                 >
                     Nice to meet you, I'm Nico. After a gap year in New Zealand,
                     I am now studying computer science in Germany. Come back
