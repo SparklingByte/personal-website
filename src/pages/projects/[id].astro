@@ -19,7 +19,7 @@ const { project } = Astro.props;
 const { Content } = await render(project);
 ---
 
-<MainLayout>
+<MainLayout title={project.data.title}>
     <div class="flex flex-col items-center">
         <div class="flex flex-col gap-10 md:w-3xl lg:w-5xl px-2">
             <div

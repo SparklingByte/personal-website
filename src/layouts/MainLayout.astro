@@ -1,5 +1,10 @@
 ---
 import NavBar from "../components/NavBar.astro";
+const { title } = Astro.props;
+
+interface Props {
+    title: string;
+}
 ---
 
 <html lang="en">
@@ -13,6 +18,7 @@ import NavBar from "../components/NavBar.astro";
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
+        <title>{title} | Nico Märtin</title>
     </head>
     <body>
         <NavBar />
