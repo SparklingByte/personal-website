@@ -6,7 +6,7 @@ export enum ProjectStatus {
   live = "Completed",
   inProgress = "In Progress",
   outdated = "Deprecated",
-  paused = "On Hold",
+  paused = "Archived",
 }
 
 type ProjectStatusKeys = keyof typeof ProjectStatus;
