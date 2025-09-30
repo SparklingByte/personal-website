@@ -1,6 +1,4 @@
 ---
-import Tag from "@/components/ui/Tag.astro";
-import BlackButton from "@/components/ui/buttons/BlackButton.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import "@/styles/global.css";
 import { getCollection, render } from "astro:content";
@@ -20,7 +18,7 @@ const { Content } = await render(project);
 
 <MainLayout title={project.data.title}>
     <div class="flex flex-col items-center mt-5">
-        <div class="md:w-3xl lg:w-5xl w-full px-2 mb-5">
+        <div class="lg:w-4xl w-full px-2 mb-5">
             <a href="/">
                 <div
                     class="text-gray-700 flex items-center gap-2 font-cascadia text-sm bg-gray-100 w-fit px-2 py-1 rounded-sm"
@@ -31,7 +29,7 @@ const { Content } = await render(project);
             </a>
         </div>
 
-        <div class="flex flex-col gap-10 md:w-3xl lg:w-5xl px-2">
+        <div class="flex flex-col gap-10 lg:w-4xl w-full lg:px-0 px-2">
             <div
                 id="headerContainer"
                 class="font-cascadia flex md:flex-row flex-col justify-center gap-10"
@@ -45,10 +43,11 @@ const { Content } = await render(project);
                     />
                 </div>
             </div>
-            <div class="bg-gray-100 border p-5 border-black/10 rounded-2xl">
+            <div class="bg-gray-50 border p-10 border-black/10 rounded-2xl">
                 <div
-                    class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-p:font-bricolage prose-p:text-justify prose-img:rounded-2xl prose-img:mb-0 max-w-none
-                prose-a:px-1 prose-a:py-0.5 prose-a:bg-blue-300 prose-a:rounded-md prose-a:no-underline"
+                    class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-headings:font-cascadia prose-h2:text-xl
+                    prose-p:font-bricolage prose-li:font-bricolage prose-img:rounded-2xl prose-img:mb-0 max-w-none
+                    prose-a:rounded-md prose-a:bg-gray-50 prose-a:px-1 prose-a:no-underline prose-a:border prose-a:mx-0.5"
                 >
                     <Content />
                 </div>
