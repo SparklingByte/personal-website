@@ -15,11 +15,11 @@ const projects = await getCollection("projects");
         <div class="bg-warm overflow-hidden flex items-center justify-center">
             <div class="flex flex-col items-center gap-8 px-7 max-w-4xl">
                 <div class="relative w-[120px] h-[120px]">
-                    <div class="relative w-full h-full">
+                    <div class="relative w-full h-full shadow rounded-3xl">
                         <img
                             src="/pictures/profile-image500.webp"
                             alt="Profile picture"
-                            class="relative w-full h-full object-cover rounded-lg [mask-image:radial-gradient(circle_at_center,black_65%,transparent_95%)]"
+                            class="relative w-full h-full object-cover rounded-3xl [mask-image:radial-gradient(circle_at_center,black_65%,transparent_95%)]"
                         />
                     </div>
                 </div>
@@ -48,11 +48,11 @@ const projects = await getCollection("projects");
                 <p
                     class="text-gray-600 font-normal text-md text-center break-words max-w-2xl font-bricolage"
                 >
-                    Nice to meet you, I’m Nico. After my gap year in New Zealand
-                    through 2024, I’m now studying Computer Science in Germany.
-                    On this website, you’ll find my latest projects and contact
-                    details. I’ll keep it updated regularly, so come back for
-                    more updates!
+                    Hi, I’m Nico! After my gap year in New Zealand from 2023 to
+                    early 2024, I’m now studying Computer Science. On this
+                    website, you’ll find my latest projects and contact details.
+                    I’ll keep it updated regularly, so come back for more
+                    updates!
                 </p>
 
                 <div class="space-x-4">
@@ -74,7 +74,7 @@ const projects = await getCollection("projects");
 
         <div
             id="projects"
-            class="border border-gray-300 bg-gray-100 rounded-xl p-5 relative mt-20 lg:w-4xl w-full"
+            class="border border-gray-300 bg-gray-50 rounded-xl p-5 relative mt-20 lg:w-4xl w-full"
         >
             <h1
                 class="absolute -top-4 bg-gray-200 px-2 py-0.5 rounded-md text-gray-600 inline font-cascadia uppercase font-bold text-sm"
@@ -87,10 +87,10 @@ const projects = await getCollection("projects");
                     class="flex items-center justify-center p-10 border border-black/10 rounded-xl"
                 >
                     <p class="text-center text-gray-400 font-cascadia">
-                        More Projects coming soon
+                        More Projects Coming Soon
                     </p>
                 </div>
             </div>
         </div>
-    </div></MainLayout
->
+    </div>
+</MainLayout>
