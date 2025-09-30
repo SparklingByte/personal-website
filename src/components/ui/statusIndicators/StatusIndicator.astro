@@ -15,4 +15,4 @@ const { status } = Astro.props;
 {status == "inProgress" && <BlueStatusIndicator status={status} />}
 {status == "live" && <GreenStatusIndicator status={status} />}
 {status == "outdated" && <RedStatusIndicator status={status} />}
-{status == "paused" && <YellowStatusIndicator status={status} />}
+{status == "archived" && <YellowStatusIndicator status={status} />}
