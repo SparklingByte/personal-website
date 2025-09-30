@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"><title>Gartenzeit | Nico Märtin</title><link rel="icon" type="image/x-icon" href="/favicon.ico"><link rel="stylesheet" href="/_astro/index.DJouaftL.css"></head> <body>  <div class="flex flex-col items-center mt-5"> <div class="lg:w-4xl w-full px-2 mb-5"> <a href="/"> <div class="text-gray-700 flex items-center gap-2 font-cascadia text-sm bg-gray-100 w-fit px-2 py-1 rounded-sm"> <i class="fa-solid fa-arrow-left"></i> <p>Back</p> </div> </a> </div> <div class="flex flex-col gap-10 lg:w-4xl w-full lg:px-0 px-2"> <div id="headerContainer" class="font-cascadia flex md:flex-row flex-col justify-center gap-10"> <div class="w-full flex flex-col justify-start items-start rounded-2xl text-left flex-2 border border-black/10 p-10 font-cascadia"> <div> <div class="inline-flex items-center px-2 py-1 text-xs font-normal leading-none text-yellow-700 bg-yellow-100 rounded-lg"> Archived </div> </div> <h1 class="font-semibold text-4xl mt-5">Gartenzeit</h1> <h2 class="lg:text-xl text-xl mt-5"> A Full-Stack Web Application for Collaborative Gardening </h2> <div class="mt-10"> <h2 class="text-left text-sm">TECH I'VE USED</h2> <div class="flex justify-start flex-wrap gap-2 mt-2"> <div class="flex flex-wrap gap-2"> <div class="bg-slate-100 border h-auto px-2 py-1 text-xs rounded-md text-black"> <p class="font-cascadia">NextJS</p> </div> </div><div class="flex flex-wrap gap-2"> <div class="bg-slate-100 border h-auto px-2 py-1 text-xs rounded-md text-black"> <p class="font-cascadia">TailwindCSS</p> </div> </div><div class="flex flex-wrap gap-2"> <div class="bg-slate-100 border h-auto px-2 py-1 text-xs rounded-md text-black"> <p class="font-cascadia">NextAuth</p> </div> </div><div class="flex flex-wrap gap-2"> <div class="bg-slate-100 border h-auto px-2 py-1 text-xs rounded-md text-black"> <p class="font-cascadia">Supabase</p> </div> </div> </div> <div class="flex flex-wrap justify-start gap-4 mt-10"> <button> <a href="https://github.com/SparklingByte/gartenzeit" class="font-cascadia text-sm font-normal inline-block px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition" target="_blank"> Open Repository <i class="fa-brands fa-github"></i></a> </button>  </div> </div> </div> <div class="rounded-2xl flex-3"> <img src="/pictures/gartenzeitTitle.jpg" class="rounded-2xl overflow-hidden h-full object-cover w-full" alt="Gartenzeit"> </div> </div> <div class="bg-gray-50 border p-10 border-black/10 rounded-2xl"> <div class="prose prose-h1:font-cascadia prose-h1:text-2xl prose-headings:font-cascadia prose-h2:text-xl
+                    prose-p:font-bricolage prose-li:font-bricolage prose-img:rounded-2xl prose-img:mb-0 max-w-none
+                    prose-a:rounded-md prose-a:bg-gray-50 prose-a:px-1 prose-a:no-underline prose-a:border prose-a:mx-0.5"> <h1 id="how-i-got-started">How I Got Started</h1>
+<p>In 2023, I decided to jump into Harvard’s CS50 online Computer Science course. It came with a ton of coding tasks, and the final challenge was to build a big project all on my own. There were no rules, so I had total freedom. That’s why I went for a full-stack web app.</p>
+<p>At the time, I was traveling in New Zealand, working on gardening and farming stuff every day. It felt natural to make an app about gardening. I got inspired by WWOOFing - helping families with garden or farm work and getting a place to stay and food in return. I thought this could work in a more flexible way. That’s how I came up with „Gartenzeit.“</p>
+<hr>
+<h1 id="what-the-app-does--its-features">What the App Does &#x26; Its Features</h1>
+<p>Gardeners or landowners can use the app to find helpers for their harvests. They can say what tasks need to be done, how many people they need, and what the reward is. It’s not about getting paid - it’s all about the fun and social vibe of gardening, like letting helpers keep some of the veggies they pick. Other users can check out these events and join the ones they like.</p>
+<p>The app has all the basic stuff and is meant as an minimum viable product. Users can sign up and log in with email, customize their profile with a picture, username, and bio, and create, edit, delete, join, or leave harvest events.</p>
+<p><img src="/pictures/gartenzeit1.jpg" alt="Screenshots Of The Gartenzeit App"></p>
+<hr>
+<h1 id="how-i-built-it">How I Built It</h1>
+<p>For my first big project, I wanted to use a modern tech stack. I needed a front end, back end, database, and a way to store files (like user profile pics).</p>
+<h2 id="front--backend">Front &#x26; Backend</h2>
+<p>I picked <a href="https://nextjs.org/">Next.js</a>, a popular full-stack framework. It let me keep my front-end and back-end code in one place and stick to one language (<a href="https://www.typescriptlang.org/">JavaScript/TypeScript</a>). Plus, it gives you the freedom to choose if pages are built statically (SSG), on the server (SSR), or on the user’s side. For styling my <a href="https://react.dev/">React</a> components, I used <a href="https://tailwindcss.com/">TailwindCSS</a>.</p>
+<h2 id="database-and-file-storage">Database and File Storage</h2>
+<p>For those, I went with <a href="https://supabase.com/">Supabase</a>, a Backend-as-a-Service that gives you a free <a href="https://www.postgresql.org/">PostgreSQL</a> database and a storage bucket. It made setting up and managing those way easier.</p>
+<p>Instead of writing SQL queries directly, I used <a href="https://www.prisma.io/">Prisma</a>, a tool that lets me handle database queries in a clean, type-safe way. The diagram below shows the database structure.</p>
+<p><img src="/pictures/gartenzeitDatabase.jpg" alt="Gartenzeit Database Structure"></p>
+<h2 id="authentication">Authentication</h2>
+<p>For an easy and flexible way to handle user sign-up, login, and session management, I used <a href="https://authjs.dev/">NextAuth.js</a> (now Auth.js). I kept it simple with just email and password login.</p>
+<hr>
+<h1 id="what-i-learned">What I Learned</h1>
+<p>Taking on a project this big was a real challenge for me, since I only had a bit of coding experience and had never built a web app before. But I grew a ton through it, diving deep into web tech. JavaScript/TypeScript was the starting point. Then, using React as a front-end library, I got into how reactive libraries work, how they tweak the DOM, and how pages or components get rendered. Figuring out when to render pages statically, on the server, or on the client was a big „aha“ moment for understanding how to make web apps faster.</p>
+<p>Besides all the tech skills, I also spent a lot of time learning how to tackle a project from the start. From coming up with the idea, defining features, and making to-do lists, to actually building it. Before coding, I thought through a bunch of stuff, like sketching out design ideas with Figma. It gave me a crazy amount of insight. Looking back, not everything was perfect, of course, but I can use what I learned to make my next project more organized.</p>
+<hr>
+<h1 id="what-id-improve">What I’d Improve</h1>
+<h2 id="code-quality--project-structure">Code Quality &#x26; Project Structure</h2>
+<ul>
+<li>Be more consistent with naming files/components, using types/schemas, and overall code structure.</li>
+<li>Pull out commonly used functions to reuse them.</li>
+<li>Use global variables/constants so I don’t have to track the same value in multiple spots.</li>
+<li>Cut down on database calls to speed things up.</li>
+</ul>
+<h2 id="features">Features</h2>
+<ul>
+<li>Add maps to search for locations.</li>
+<li>Let users filter and search harvests by name, location, produce, etc.</li>
+<li>Allow following other users to see when they post a harvest.</li>
+<li>Make the UI more responsive for better use on desktop screens.</li>
+<li>Add notifications for updates on harvests you joined or when someone joins yours.</li>
+<li>Add an approval system to accept or reject participants for a harvest.</li>
+<li>Improve editing options for harvests.</li>
+</ul>
+<hr>
+<h1 id="further-details">Further Details</h1>
+<p>The <a href="https://github.com/SparklingByte/gartenzeit">repository</a> contains a README file where I explain some aspects of the used tech in more detail.</p> </div> </div> </div> </div>  <footer class="mt-20"> <div class="bg-gray-200 border-t border-stone-300"> <p class="text-gray-500 font-cascadia text-xs text-center py-2">
+© 2025 Nico Märtin
+</p> </div> </footer> </body></html>
