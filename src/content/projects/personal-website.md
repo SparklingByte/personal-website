@@ -4,6 +4,7 @@ description: "A central hub for my contact information and a dynamic portfolio s
 techUsed: ["Astro", "TailwindCSS"]
 image: "/pictures/personalWebsiteTitle.jpg"
 status: live
+repoLink: https://github.com/SparklingByte/personal-website
 ---
 
 # The Motivation
